@@ -20,7 +20,7 @@ function Question({ question, onAnswered }) {
     }, 1000); //decrements the time by 1 second.
 
 //implementing a clean up function
-    return function () {
+    return function cleanup () {
       clearTimeout(timerId);
     };
   }, [timeRemaining, onAnswered]);
